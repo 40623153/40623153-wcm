@@ -98,9 +98,8 @@ init_mathjax();
 <script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
 -->
 
-<script type="text/javascript">
-if ((location.href.search(/http:/) != -1) && (location.href.search(/login/) != -1)) window.location= 'https://' + location.host + location.pathname + location.search;
-</script></head><body>
+</head>
+<body>
 <div class='container'><nav>
         
     <div class="site-wrap">
@@ -117,14 +116,14 @@ if ((location.href.search(/http:/) != -1) && (location.href.search(/login/) != -
             <header class="site-navbar py-4 bg-white" role="banner">
               <div class="container-fluid">
                 <div class="row align-items-center">
-                <h1>CMSimfly - 動靜皆宜的簡潔網際內容管理</h1>
+                <h1>40623153-網際內容管理</h1>
                 <div class="pl-4">
                     <form>
                     <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
                     </form>
                 </div>
                   <!-- <div class="col-11 col-xl-2">
-                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">CMSimfly - 動靜皆宜的簡潔網際內容管理</a></h1> 
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">40623153-網際內容管理</a></h1> 
                   </div>
                   -->
                   <div class="col-12 col-md-10 d-none d-xl-block">
@@ -137,7 +136,7 @@ if ((location.href.search(/http:/) != -1) && (location.href.search(/login/) != -
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='簡介.html'>簡介</a><li><a href='目錄結構.html'>目錄結構</a><li class='has-children'><a href='頁面編輯.html'>頁面編輯</a><ul class='dropdown'><li class='has-children'><a href='插入程式碼.html'>插入程式碼</a><ul class='dropdown'><li><a href='Java 程式碼.html'>Java 程式碼</a><li><a href='Python 程式碼.html'>Python 程式碼</a><li><a href='C或C++程式碼.html'>C或C++程式碼</a><li><a href='Lua 程式碼.html'>Lua 程式碼</a><li><a href='Javascript 程式碼.html'>Javascript 程式碼</a><li><a href='Html 原始碼.html'>Html 原始碼</a></li></li></ul></ul><li><a href='網際簡報.html'>網際簡報</a><li><a href='網誌編輯.html'>網誌編輯</a><li><a href='已知錯誤.html'>已知錯誤</a></li>
+                     <li><a href='簡介.html'>簡介</a><li><a href='學員出席.html'>學員出席</a><li class='has-children'><a href='虛擬主機配置.html'>虛擬主機配置</a><ul class='dropdown'><li class='has-children'><a href='插入程式碼.html'>插入程式碼</a><ul class='dropdown'><li><a href='Java 程式碼.html'>Java 程式碼</a><li><a href='Python 程式碼.html'>Python 程式碼</a><li><a href='C或C++程式碼.html'>C或C++程式碼</a><li><a href='Lua 程式碼.html'>Lua 程式碼</a><li><a href='Javascript 程式碼.html'>Javascript 程式碼</a><li><a href='Html 原始碼.html'>Html 原始碼</a></li></li></ul></ul><li><a href='網路連線配置與設定.html'>網路連線配置與設定</a><li><a href='Github 倉儲與 CMSimfly 配置.html'>Github 倉儲與 CMSimfly 配置</a><li><a href='CMSimfly 操作.html'>CMSimfly 操作</a><li><a href='CMSimfly 開發.html'>CMSimfly 開發</a></li>
                       </ul>
                 </nav>
               </div>
@@ -148,11 +147,12 @@ if ((location.href.search(/http:/) != -1) && (location.href.search(/login/) != -
           </div>
           
         </header>
-    <div id="tipue_search_content">目錄結構 << <a href='目錄結構.html'>Previous</a> <a href='插入程式碼.html'>Next</a> >> 插入程式碼<br /><h1>頁面編輯</h1>
-<p>CMSimfly 動態系統的網際編輯器採用 <a href="https://www.tiny.cloud/">TinyMCE4</a>, 可以放入一般超文件,  納入圖檔, 嵌入影片連結, 並且加入帶有行數的原始碼.</p>
-<p>透過 File Upload 功能, 可以一次上傳多個檔案,  存入 downloads 目錄中儲存, 之後各頁面可以引入對應連結.</p>
-<p>而圖檔的上傳與引用與一般檔案類似, 但上傳後存入 images 目錄中.</p>
-<br />目錄結構 << <a href='目錄結構.html'>Previous</a> <a href='插入程式碼.html'>Next</a> >> 插入程式碼</div>
+    <div id="tipue_search_content">簡介 << <a href='簡介.html'>Previous</a> <a href='虛擬主機配置.html'>Next</a> >> 虛擬主機配置<br /><h1>學員出席</h1>
+<p>CMSimfly 的動態系統採用 Python3 + Flask 建構, 並且利用 Beatifulsoup 解讀位於 contig 目錄中的 content.htm 超文件檔案.</p>
+<p>content.htm 檔案可以透過動態系統中的 generate_pages 功能, 將超文件轉為位於 content 目錄中的個別頁面檔案.</p>
+<p>動態系統與靜態系統則共用 downloads, images, static 等目錄, 其中 downloads 目錄存放在動態系統上傳的文件檔, 而 images 目錄則存放動態系統所上傳的影像檔案, 包括 jpg, png 與 gif 等格式圖檔.</p>
+<p>static 目錄則存放在動態與靜態系統所需要的 Javascript 或 Brython 程式檔.</p>
+<br />簡介 << <a href='簡介.html'>Previous</a> <a href='虛擬主機配置.html'>Next</a> >> 虛擬主機配置</div>
         
     <!-- footer -->
       <div class="container">
